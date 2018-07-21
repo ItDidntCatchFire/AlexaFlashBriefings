@@ -28,6 +28,8 @@ namespace AlexaFlashBriefings.Controllers
 
         public async Task<Models.AlexaResponse> GetResponse(string title, string main, string url)
         {
+            //TODO: Find a better way of replacing the codes
+            //Replaces the codes with the correct symbols
             main = main.Replace("&#8217;", "'");
             main = main.Replace("&#8220;", "\"");
             main = main.Replace("&#8211;", "–");

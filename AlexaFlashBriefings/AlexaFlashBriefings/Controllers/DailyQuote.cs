@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 
 namespace AlexaFlashBriefings.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/AlexaFlashBriefings/[controller]")]
     public class DailyQuoteController : BaseController
     {
         private const string URL = "http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1";
@@ -19,6 +19,7 @@ namespace AlexaFlashBriefings.Controllers
             
             var quote = result[0];
 
+            //Strips the HTML
             quote.content = quote.content.Replace("<p>","");
             quote.content = quote.content.Replace("</p>\n", "");
             
