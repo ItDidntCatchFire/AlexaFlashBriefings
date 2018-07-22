@@ -24,7 +24,7 @@ namespace AlexaFlashBriefings
             services.AddMvc()
             .AddJsonOptions(options =>
             {
-                options.SerializerSettings.DateFormatString = "yyyy-MM-ddTHH:mm:0Z";
+                options.SerializerSettings.DateFormatString = "yyyy-MM-ddTHH:mm:ss.0Z";
             });
         }
 
